@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Site Information -->
+    <title>QRCode</title>
+    <link rel="icon" type="image/x-icon" href="favicon.svg">
+    <meta name="description" content="A QRCode generator created with vanilla JavaScript by Joshua Ferris.">
+    <meta name="author" content="Joshua Ferris">
+    <meta name="keywords" content="QRCode">
+    <!-- Styling -->
+    <meta name="theme-color" content="#4285f4">
+    <link rel="stylesheet" href="style.css">
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/qr-creator/dist/qr-creator.min.js"></script>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>QR Code Generator</h1>
+    </header>
+    <main>
+      <form id="qrForm">
+        <label for="url">
+          URL<span class="required">*</span>:
+          <input type="url" required name="url" id="url" />
+        </label>
+        <label for="filename">
+          Filename<span class="required">*</span>:
+          <input type="text" value="qr_code" required name="filename" id="filename" />
+        </label>
+        <label for="color">
+          Color:
+          <input type="color" value="#536DFE" name="color" id="color">
+        </label>
+        <label for="background">
+          Background?
+          <input type="checkbox" name="background" id="background">
+        </label>
+        <label for="backgroundColor">
+          Background Color:
+          <input type="color" name="backgroundColor" id="backgroundColor">
+        </label>
+        <p class="required">* indicates a required field</p>
+        <button type="submit">Generate</button>
+      </form>
+    </main>
+    <footer>
+      <p>Made with 💜 by Joshua Ferris</p>
+      <p>QR Code is a registered trademark of DENSO WAVE.</p>
+    </footer>
+  </body>
+</html>
